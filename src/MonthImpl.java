@@ -1,13 +1,13 @@
 public class MonthImpl {
 
-    private class MonthUtils {
+    public class MonthUtils {
 
-        public static final class Month {
+        private static final class Month implements IMonth {
             private String name;
             private int cDays;
             private int wDays;
 
-            public Month(String name, int cDays, int wDays) {
+            private Month(String name, int cDays, int wDays) {
                 this.name = name;
                 this.cDays = cDays;
                 this.wDays = wDays;

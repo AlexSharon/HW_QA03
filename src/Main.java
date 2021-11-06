@@ -9,7 +9,7 @@ public class Main {
         //System.out.println(Maxim.getSalary(MonthUtils.MONTHS));
 
 
-        MonthUtils.Month[] q1 = MonthUtils.q(4);
+       IMonth[] q1 = MonthUtils.q(4);
         for (int i = 0; i < q1.length; i++) {
             System.out.println(q1[i].getName());
         }

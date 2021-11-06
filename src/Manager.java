@@ -25,7 +25,7 @@ public final class Manager extends BaseEmployee {
     }
 
     @Override
-    public double getSalary(MonthUtils.Month[] monthArray) {
+    public double getSalary(IMonth[] monthArray) {
         double factor = numOfSubordinates / 100.0 + 1;
         return this.getSalary(monthArray) * factor;
     }

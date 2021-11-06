@@ -43,5 +43,5 @@ public abstract class BaseEmployee {
         return dailySalary;
     }
 
-    public abstract double getSalary(MonthUtils.Month[] monthArray);
+    public abstract double getSalary(IMonth[] monthArray);
 }

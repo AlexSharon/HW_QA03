@@ -5,10 +5,9 @@ public final class Employee extends BaseEmployee {
         super(name, age, gender, dailySalary);
     }
 
-    @Override
-    public double getSalary(MonthUtils.Month[] monthArray) {
+    public double getSalary(IMonth[] monthArray) {
         int days = 0;
-        for (MonthUtils.Month m : monthArray) {
+        for (IMonth m : monthArray) {
             days += m.getWDays();
         }
         return days * super.getDailySalary();

@@ -8,8 +8,11 @@ public class Main {
 
         //System.out.println(Maxim.getSalary(MonthUtils.MONTHS));
 
-        List list = MonthUtils.quarters(2);
-        System.out.println(list.get(0));
+
+        MonthUtils.Month[] q1 = MonthUtils.q(4);
+        for (int i = 0; i < q1.length; i++) {
+            System.out.println(q1[i].getName());
+        }
 
     }
 

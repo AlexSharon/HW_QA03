@@ -55,4 +55,21 @@ public class MonthUtils {
         }
         return listQ;
     };
+
+    public static Month[] q(int q) {
+
+        Month[] listQ;
+        switch (q) {
+            case 1:
+                return new Month[]{MONTHS[0], MONTHS[1], MONTHS[2]};
+            case 2:
+                return new Month[]{MONTHS[3], MONTHS[4], MONTHS[5]};
+            case 3:
+                return new Month[]{MONTHS[6], MONTHS[7], MONTHS[8]};
+            case 4:
+                return new Month[]{MONTHS[9], MONTHS[10], MONTHS[11]};
+            default:
+                return null;
+        }
+    };
 }

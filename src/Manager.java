@@ -7,7 +7,7 @@
 //К рассчитанной ЗП должно прибавляться по 1% за каждого
 // подчиненного.
 
-public class Manager extends Employee {
+public final class Manager extends BaseEmployee {
 
     private int numOfSubordinates;
 
@@ -27,6 +27,6 @@ public class Manager extends Employee {
     @Override
     public double getSalary(MonthUtils.Month[] monthArray) {
         double factor = numOfSubordinates / 100.0 + 1;
-        return super.getSalary(monthArray) * factor;
+        return this.getSalary(monthArray) * factor;
     }
 }

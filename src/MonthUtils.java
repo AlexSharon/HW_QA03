@@ -1,4 +1,6 @@
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class MonthUtils {
@@ -19,7 +21,7 @@ public class MonthUtils {
         public int getWDays() { return wDays; }
     }
 
-    public static Month[] MONTHS = {
+    public static final Month[] MONTHS = {
         new Month("Jan", 31, 18),
         new Month("Feb", 28, 20),
         new Month("Mar", 31, 22),
@@ -35,23 +37,22 @@ public class MonthUtils {
     };
 
     //метод возвращающий кварталы (массивы по 3 месяца соответственно)
-    public static Month[] quarters(int q) {
-        if (q == 1) {
-            Month[] res = {
-                    new Month("Jan", 31, 18),
-                    new Month("Feb", 28, 20),
-                    new Month("Mar", 31, 22),
-            };
-            return res;
-        } else if (q == 2) {
-            Month[] res = {
-                    new Month("Apr", 30, 21),
-                    new Month("May", 31, 22),
-                    new Month("Jun", 30, 21),
-            };
-            return res;
-        }
-        return null;
+    public static List quarters(int q) {
 
+        List listQ = new ArrayList();
+
+        for (int i = 0; i < 3; i++) {
+            switch (q) {
+                case 1:
+                    listQ.add(i, MONTHS[i]);
+                case 2:
+                    listQ.add(i, MONTHS[i+2]);
+                case 3:
+                    listQ.add(i, MONTHS[i+5]);
+                case 4:
+                    listQ.add(i, MONTHS[i+8]);
+            }
+        }
+        return listQ;
     };
 }

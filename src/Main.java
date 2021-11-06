@@ -1,3 +1,4 @@
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,10 +8,8 @@ public class Main {
 
         //System.out.println(Maxim.getSalary(MonthUtils.MONTHS));
 
-        for (MonthUtils.Month m : MonthUtils.quarters(2)) {
-            System.out.println(m.getName());
-        };
-
+        List list = MonthUtils.quarters(2);
+        System.out.println(list.get(0));
 
     }
 
